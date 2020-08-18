@@ -8,64 +8,53 @@ class App extends Component {
     tasks: [
       {
         id: 1,
-        text: "Task1",
+        text:
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo laboriosam ut inventore maiores nemo explicabo earum esse, numquam magnam tenetur mollitia provident at, rerum consectetur veritatis labore, sit doloremque quae!1",
         done: true,
         doByDate: "",
         finishedAtDate: "2018-05-10",
         important: false,
         preview: "",
+        title: "Task 1",
       },
       {
         id: 2,
-        text: "Task2",
+        text:
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis amet consequuntur, debitis incidunt laboriosam possimus temporibus? Inventore quidem explicabo placeat? Mollitia aut quos nisi. Maiores incidunt eaque officiis beatae dignissimos!2",
         done: false,
         doByDate: "2019-05-10",
         finishedAtDate: "",
         important: false,
         preview: "",
+        title: "Task 2",
       },
       {
         id: 3,
-        text: "Task3",
+        text:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ullam? At sint, officiis id a, nesciunt praesentium quidem doloremque, consequuntur rerum dolores et voluptas ipsam cupiditate dolore quibusdam fugiat! Quia.3",
         done: false,
         doByDate: "2017-05-10",
         finishedAtDate: "",
         important: false,
         preview: "",
+        title: "Task 3",
       },
       {
         id: 4,
-        text: "Task4",
+        text:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum beatae reiciendis in hic enim voluptatum asperiores ipsum nulla minima. Voluptatum esse dignissimos corporis necessitatibus rerum amet placeat incidunt magni aspernatur!4",
         done: false,
         doByDate: "2017-12-12",
         finishedAtDate: "",
         important: false,
         preview: "",
-      },
-      {
-        id: 5,
-        text: "Task5",
-        done: false,
-        doByDate: "2034-05-10",
-        finishedAtDate: "",
-        important: false,
-        preview: "",
-      },
-      {
-        id: 6,
-        text: "Task6",
-        done: false,
-        doByDate: "2019-05-10",
-        finishedAtDate: "",
-        important: false,
-        preview: "",
+        title: "Task 4",
       },
     ],
   };
 
   switchPreview = (id) => {
     const index = this.state.tasks.findIndex((task) => task.id === id);
-    //THIS IF PREVENTS TRIGGERING ON PARENT WHILE CLICK ON DELETE/DOIT BUTTON IN TASK COMPONENT
     if (index !== -1) {
       const tasks = this.state.tasks;
       if (tasks[index].preview === "") {

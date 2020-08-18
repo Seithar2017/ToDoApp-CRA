@@ -12,7 +12,7 @@ const Task = (props) => {
         }}
         className={"task " + props.preview}
       >
-        {props.text} ---
+        {props.preview === "active" ? props.text : props.title} ---
         {props.done
           ? `Wykonano:  ${props.finishedAtDate}`
           : `Wykonać do: ${props.doByDate}`}

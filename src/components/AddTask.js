@@ -11,6 +11,7 @@ class AddTask extends Component {
     finishedAtDate: "",
     important: false,
     preview: "",
+    title: "",
   };
 
   handleChange = (e) => {
@@ -50,9 +51,14 @@ class AddTask extends Component {
   render() {
     return (
       <form id="addTaskForm" onSubmit={this.handleSubmit}>
-        <label id="newTaskLabel" htmlFor="newTask">
-          Dodaj nowe zadanie:
-        </label>
+        <input
+          type="text"
+          id="titleInput"
+          placeholder="Dodaj nazwę dla swojego zadania..."
+          name="title"
+          value={this.state.title}
+          onChange={this.handleChange}
+        />
         <textarea
           type="textarea"
           id="newTaskText"

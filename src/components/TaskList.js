@@ -28,6 +28,7 @@ const TaskList = (props) => {
         delete={props.delete}
         switchPreview={props.switchPreview}
         preview={task.preview}
+        title={task.title}
       />
     );
   });
@@ -46,6 +47,7 @@ const TaskList = (props) => {
           do={props.do}
           switchPreview={props.switchPreview}
           preview={task.preview}
+          title={task.title}
         />
       );
     } else return null;
