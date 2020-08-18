@@ -43,6 +43,8 @@ p.task:hover {
   cursor: pointer;
 }
 p.task.active {
+  text-align: center;
+
   animation-name: taskslide;
   animation-duration: 0.3s;
   animation-fill-mode: both;
