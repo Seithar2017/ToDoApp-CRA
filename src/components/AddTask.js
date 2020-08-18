@@ -38,6 +38,10 @@ class AddTask extends Component {
       alert("Wpisz treść zadania");
       return 0;
     }
+    if (this.state.title === "") {
+      alert("Podaj nazwę dla zadania");
+      return 0;
+    }
     e.preventDefault();
     this.counter++;
     this.props.addTask(this.state);
@@ -45,9 +49,10 @@ class AddTask extends Component {
       id: this.counter,
       text: "",
       doByDate: "",
+      title: "",
     });
   };
-  componentDidUpdate() {}
+
   render() {
     return (
       <form id="addTaskForm" onSubmit={this.handleSubmit}>
