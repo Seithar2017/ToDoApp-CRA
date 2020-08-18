@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../styles/AddTask.css";
 
 class AddTask extends Component {
+  date = new Date().toISOString().slice(0, 10);
   counter = 1000;
   state = {
     id: this.counter,
@@ -75,7 +76,7 @@ class AddTask extends Component {
         <input
           id="dateInput"
           type="date"
-          min="2020-08-17"
+          min={this.date}
           value={this.state.doByDate}
           onChange={this.handleChange}
           name="doByDate"
