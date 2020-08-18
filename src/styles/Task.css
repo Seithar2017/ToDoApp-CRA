@@ -1,0 +1,76 @@
+p:nth-child(odd) {
+  background-color: lightgray;
+  color: black;
+}
+p:nth-child(even) {
+  background-color: gray;
+}
+button.delete {
+  width: 1rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+button.do {
+  width: 2.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+button.do:hover,
+button.delete:hover {
+  background-color: white;
+  color: black;
+}
+
+p.task {
+  font-size: 1rem;
+  height: 1.3em;
+  position: relative;
+  overflow: hidden;
+  word-break: break-all;
+  transition: 0.3s;
+}
+
+p.task:hover {
+  letter-spacing: 2px;
+  color: yellow;
+  cursor: pointer;
+}
+p.task.active {
+  animation-name: taskslide;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+@keyframes taskslide {
+  0% {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightyellow;
+    color: black;
+    position: absolute;
+    z-index: 5;
+    letter-spacing: normal;
+  }
+  100% {
+    width: 50vw;
+    height: 50vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightyellow;
+    color: black;
+    position: absolute;
+    z-index: 5;
+    letter-spacing: normal;
+  }
+}

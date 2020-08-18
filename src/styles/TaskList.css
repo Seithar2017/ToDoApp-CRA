@@ -1,0 +1,18 @@
+div.tasks {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+section.done {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  background-color: gray;
+}
+
+section.undone {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+}

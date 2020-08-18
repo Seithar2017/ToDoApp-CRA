@@ -1,0 +1,11 @@
+h1.title {
+  text-align: center;
+  font-size: 5em;
+  background-color: gray;
+  color: white;
+  opacity: 0.7;
+  border: 10px solid black;
+}
+h1.title::selection {
+  background-color: transparent;
+}
