@@ -47,6 +47,7 @@ p.task.active {
   animation-name: taskslide;
   animation-duration: 0.3s;
   animation-fill-mode: both;
+  pointer-events: all;
 }
 
 @keyframes taskslide {

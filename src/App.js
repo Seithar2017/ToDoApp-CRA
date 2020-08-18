@@ -94,6 +94,21 @@ class App extends Component {
       tasks,
     });
   };
+
+  blockClickOutsideTask = () => {
+    const tasks = [...this.state.tasks];
+    const checkIfPreviewIsActive = tasks.findIndex(
+      (task) => task.preview === "active"
+    );
+    if (checkIfPreviewIsActive !== -1) {
+      document.querySelector("body").style.pointerEvents = "none";
+    } else {
+      document.querySelector("body").style.pointerEvents = "all";
+    }
+  };
+  componentDidUpdate() {
+    this.blockClickOutsideTask();
+  }
   render() {
     return (
       <>
